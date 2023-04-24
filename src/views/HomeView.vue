@@ -29,13 +29,10 @@
 }
 
 .color-text {
-  color: transparent;
-  background: -webkit-linear-gradient(-45deg, #666 30%, #333);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px #333;
-  opacity: 0.5;
+  color: #fff;
+  text-shadow: 0 0 30px #ccc;
+  user-select: none;
+  opacity: 0.6;
 }
 
 .title {
