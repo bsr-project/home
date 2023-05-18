@@ -88,20 +88,60 @@
   </div>
 
   <div mt-10 px-16>
+    <div class="title" text-xl>队员风采</div>
+  </div>
+
+  <div mt-10 px-16>
+    <swiper
+      :modules="modules"
+      :slides-per-view="3"
+      :space-between="50"
+      :loop="true"
+      navigation
+      h-68
+      text-center
+    >
+      <swiper-slide v-for="imageSrc in images" :key="imageSrc" overflow-hidden>
+        <img :src="imageSrc" object-cover w-full h-full select-none />
+      </swiper-slide>
+    </swiper>
+  </div>
+
+  <div mt-10 px-16>
     <div class="title" text-xl>蓝天救援</div>
   </div>
 
   <div mt-10 px-16 h-96 grid grid-cols-2 gap-5>
     <div>
       <div class="archives image-1" rounded-9></div>
+      <!-- https://mp.weixin.qq.com/s/E2Iqd2Dy0vpqykUaVTiyiw -->
     </div>
     <div flex flex-col justify-between items-center gap-5>
       <div class="archives image-2" rounded-9></div>
+      <!-- https://mp.weixin.qq.com/s/UkmYQ542sNXW0MoRIrBGOA -->
       <div class="archives image-3" rounded-9></div>
+      <!-- https://mp.weixin.qq.com/s/uX2Ch5B5LaAbphf289Jnjg -->
     </div>
   </div>
 
   <div h-32></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Navigation, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+const importImages = import.meta.glob('@/assets/images/swiper/*.jpg', {
+  eager: true
+})
+
+const images = Object.keys(importImages).map(
+  (key) => new URL((importImages[key] as any).default, import.meta.url).href
+)
+
+const modules = [Navigation, Pagination]
+</script>

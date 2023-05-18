@@ -23,6 +23,10 @@
       margin-left: 5rem;
     }
   }
+
+  a.disabled {
+    color: #999;
+  }
 }
 </style>
 
@@ -35,9 +39,9 @@
 
     <div class="links">
       <router-link class="nav-link" to="/">首页</router-link>
-      <router-link class="nav-link" to="/">蓝天救援</router-link>
-      <router-link class="nav-link" to="/">关于我们</router-link>
-      <router-link class="nav-link" to="/">联系我们</router-link>
+      <router-link class="nav-link disabled" cursor-not-allowed to="/">蓝天救援</router-link>
+      <router-link class="nav-link disabled" cursor-not-allowed to="/">关于我们</router-link>
+      <router-link class="nav-link disabled" cursor-not-allowed to="/">联系我们</router-link>
     </div>
   </div>
 </template>
