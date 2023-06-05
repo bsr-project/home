@@ -32,18 +32,32 @@
 
 <template>
   <div class="nav-bar" h-32 flex justify-between items-center px-16>
-    <div flex justify-center items-center>
+    <div
+      flex
+      justify-center
+      items-center
+      cursor-pointer
+      @click="router.push('/')"
+    >
       <div class="logo" w-10 h-10></div>
       <div class="logo-text" ml-3 text-2xl>杭州上城区蓝天救援队</div>
     </div>
 
     <div class="links">
       <router-link class="nav-link" to="/">首页</router-link>
-      <router-link class="nav-link disabled" cursor-not-allowed to="/">蓝天救援</router-link>
-      <router-link class="nav-link disabled" cursor-not-allowed to="/">关于我们</router-link>
-      <router-link class="nav-link disabled" cursor-not-allowed to="/">联系我们</router-link>
+      <router-link class="nav-link disabled" cursor-not-allowed to="/"
+        >蓝天救援</router-link
+      >
+      <router-link class="nav-link disabled" cursor-not-allowed to="/"
+        >关于我们</router-link
+      >
+      <router-link class="nav-link" to="/join">加入我们</router-link>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+</script>

@@ -1,8 +1,4 @@
 <style lang="scss" scoped>
-.home-container {
-  background-color: #edefff;
-}
-
 .text {
   .logo-text {
     letter-spacing: 0.5rem;
