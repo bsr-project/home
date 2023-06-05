@@ -1,8 +1,4 @@
-<style lang="scss" scoped>
-.app-container {
-  background-color: #edefff;
-}
-</style>
+<style lang="scss"></style>
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
