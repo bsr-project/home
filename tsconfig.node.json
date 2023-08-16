@@ -3,7 +3,8 @@
     "vite.config.*",
     "vitest.config.*",
     "cypress.config.*",
-    "playwright.config.*"
+    "playwright.config.*",
+    "auto-import.ts"
   ],
   "compilerOptions": {
     "module": "ESNext",
