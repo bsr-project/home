@@ -36,10 +36,14 @@ const docxData = ref('')
 
 const docs = import.meta.glob('@/assets/docs/*.docx', { eager: true })
 
-const list = _map(docs, (item: any, key: string) => ({
-  path: key,
-  name: _get(/\/([^/]*)\.docx$/.exec(key), '1', '')
-}))
+const list = _map(docs, (item: any, key: string) => {
+  const name = _get(/\/([^/]*)\.docx$/.exec(key), '1', '')
+
+  return {
+    path: item.default,
+    name
+  }
+})
 
 const openDocx = async (path: string) => {
   const arrayBuffer = await axios.get(path, { responseType: 'arraybuffer' })
