@@ -45,9 +45,7 @@
 
     <div class="links">
       <router-link class="nav-link" to="/">首页</router-link>
-      <router-link class="nav-link disabled" cursor-not-allowed to="/"
-        >蓝天救援</router-link
-      >
+      <router-link class="nav-link" to="/information">信息公示</router-link>
       <router-link class="nav-link" to="/activity">活动动态</router-link>
       <router-link class="nav-link" to="/join">加入我们</router-link>
     </div>
